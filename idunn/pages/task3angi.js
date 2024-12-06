@@ -17,7 +17,7 @@ export default function Task3() {
           type="text"
           placeholder="Email or Phone number"
           onChange={(test) => setSearch(test.target.value)}
-          className="border border-gray-300 rounded px-3 py-2 "
+          className="border border-gray-300 rounded px-3 py-2 text-black"
         />
         <input
             placeholder="Username"
