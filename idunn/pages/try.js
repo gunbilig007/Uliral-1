@@ -36,12 +36,21 @@ export default function Home() {
       </div>
       <div className="m-4">
         
-        {filteredData.map((item) => (
-          <div key={item.id} className="border bg-white border-gray-300 rounded-lg shadow-md p-4 my-4 ">
-            <h2 className="text-lg font-semibold mb-2 text-gray-500 ">{item.title}</h2>
-            <p className="text-gray-900 ">{item.text}</p>
-          </div>
-        ))}
+      {filteredData.length > 0 ? (
+  <div className="m-4">
+    {filteredData.map((item) => (
+      <div key={item.id} className="border bg-white border-gray-300 rounded-lg shadow-md p-4 my-4 ">
+        <h2 className="text-lg font-semibold mb-2 text-gray-500 ">{item.title}</h2>
+        <p className="text-gray-900 ">{item.text}</p>
+      </div>
+    ))}
+  </div>
+) : (
+  <p className="text-center text-gray-500 w-full">
+    Илэрц олдсонгүй 
+  </p>
+)}
+        
       </div>
     </div>
   );
